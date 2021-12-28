@@ -1,0 +1,73 @@
+/* this main element holds all of our steps and our chart
+   the most important part here is the "position: relative"
+   it isn't critical to know exactly what it does right now
+   but if you're interested you can read more on Mozilla.org
+*/
+
+body {
+    background-color: rgb(243, 235, 224)
+}
+
+main {
+    align-items: center;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-items */
+    display: flex;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+    flex-direction: column;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction */
+    position: relative;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/position */
+}
+/* this holds our SVG and is where D3 puts the chart */
+#chart {
+    position: sticky;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky_positioning */
+    top: 15vh;
+}
+#year {
+    font-family: helvetica;
+    font-size: 110px;
+    fill: saddlebrown
+}
+/* these are our "steps", each one is a bit of text
+   that triggers some sort of change in the chart
+*/
+.step {
+    color: #fff;
+    height: 25vh; 
+    /* vh stands for vertical height unit. this means 25% of the max verical heigh */
+    margin-bottom: 50vh;
+    position: relative;
+    z-index: 20;
+}
+.step:last-child {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child */
+    margin-bottom: 0;
+}
+.step p {
+    background-color: #4d3404;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 320px;
+    font-family: helvetica
+}
+  
+  h1{
+    font-size: 3.5rem;
+    color: saddlebrown;
+    font-family: helvetica;
+    margin-top: 30vh;
+    margin-right: 50vh;
+    margin-left: 25vh
+  }
+  
+  .axis-y{
+    font-size: 0.5rem;
+    color: saddlebrown
+  }
+  
+  .axis-x{
+    font-size: 0.5rem;
+    color: saddlebrown
+  }
